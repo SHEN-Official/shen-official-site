@@ -28,22 +28,24 @@ body {
 .nav-content {
     max-width: 1024px;
     margin: 0 auto;
-    padding: 0 8.33333%;
+    padding: 0 22px;
     display: flex;
     justify-content: space-between;
     align-items: center;
     height: 100%;
-    position: relative; /* 添加相對定位 */
+    position: relative;
 }
 
 .logo {
     text-decoration: none;
     display: flex;
     align-items: center;
+    padding: 0 8px;
 }
 
+/* Logo 自適應顏色 */
 .logo-image {
-    height: 32px;
+    height: 28px;
     width: auto;
     display: block;
 }
@@ -51,10 +53,10 @@ body {
 .nav-links {
     display: flex;
     list-style: none;
-    gap: 2.4rem;
+    gap: 35px;
     align-items: center;
     height: 100%;
-    margin-left: auto; /* 確保導航連結靠右 */
+    margin-left: auto;
 }
 
 .nav-links a {
@@ -76,10 +78,7 @@ body {
 }
 
 .language-switcher {
-    position: relative;
-    display: flex !important; /* 強制顯示 */
-    align-items: center;
-    z-index: 1002; /* 確保在最上層 */
+    margin-left: 35px;
 }
 
 .lang-btn {
@@ -90,6 +89,7 @@ body {
     cursor: pointer;
     color: #1d1d1f;
     text-decoration: none;
+    font-size: 12px;
 }
 
 /* 確保語言按鈕在手機版上可見 */
