@@ -107,7 +107,7 @@ body {
     }
     
     .lang-btn i {
-        font-size: 16px;
+        font-size: 12px; /* 調整為與導航欄文字相同的大小 */
     }
     
     .lang-btn span {
@@ -140,7 +140,7 @@ body {
     }
     
     .lang-btn i {
-        font-size: 18px;
+        font-size: 12px; /* 調整為與導航欄文字相同的大小 */
         margin-right: 0;
     }
 }
@@ -162,7 +162,7 @@ body {
     }
     
     .lang-btn i {
-        font-size: 18px;
+        font-size: 12px; /* 調整為與導航欄文字相同的大小 */
     }
     
     .lang-btn span {
@@ -189,7 +189,7 @@ body {
     }
     
     .lang-btn i {
-        font-size: 20px;
+        font-size: 12px; /* 調整為與導航欄文字相同的大小 */
         margin-right: 0;
     }
     
