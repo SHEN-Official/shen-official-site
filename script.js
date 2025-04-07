@@ -86,7 +86,7 @@ document.querySelectorAll('.grid-item').forEach(item => {
 });
 
 // 確保 DOM 完全加載後再執行
-window.addEventListener('load', function() {
+document.addEventListener('DOMContentLoaded', function() {
     console.log('頁面完全加載完成');
     
     // 語言切換相關
@@ -94,23 +94,22 @@ window.addEventListener('load', function() {
     const langDropdown = document.querySelector('.language-dropdown');
 
     // 點擊語言按鈕時顯示/隱藏下拉選單
-    langBtn.addEventListener('click', function(e) {
-        e.preventDefault();
-        e.stopPropagation();
-        langDropdown.classList.toggle('show');
-    });
+    if (langBtn && langDropdown) {
+        langBtn.addEventListener('click', function(e) {
+            e.preventDefault();
+            e.stopPropagation();
+            langDropdown.classList.toggle('show');
+        });
 
-    // 點擊其他地方時關閉下拉選單
-    document.addEventListener('click', function(e) {
-        if (!e.target.closest('.language-switcher')) {
-            langDropdown.classList.remove('show');
-        }
-    });
+        // 點擊其他地方時關閉下拉選單
+        document.addEventListener('click', function(e) {
+            if (!e.target.closest('.language-switcher')) {
+                langDropdown.classList.remove('show');
+            }
+        });
+    }
 
-    // 清除 localStorage 中的 ageVerified 值，確保每次訪問都會顯示年齡確認
-    localStorage.removeItem('ageVerified');
-    console.log('已清除 localStorage 中的 ageVerified 值');
-    
+    // 模態框相關
     const ageModal = document.getElementById('ageCheckModal');
     const productModal = document.getElementById('productModal');
     const confirmBtn = document.querySelector('.age-confirm-btn');
@@ -125,50 +124,35 @@ window.addEventListener('load', function() {
         productModal.style.display = 'none';
     }
     
-    // 檢查 localStorage 中是否存在 ageVerified
-    const hasAgeVerified = localStorage.getItem('ageVerified') !== null;
-    console.log('localStorage 中是否存在 ageVerified:', hasAgeVerified);
-
     // 檢查年齡確認狀態
     function checkAgeVerification() {
-        const isVerified = localStorage.getItem('ageVerified');
-        console.log('年齡驗證狀態:', isVerified);
-        return isVerified === 'true';
+        return localStorage.getItem('ageVerified') === 'true';
     }
 
     // 關閉模態框的函數
     function closeModal(modal) {
-        if (!modal) {
-            console.error('嘗試關閉不存在的模態框');
-            return;
+        if (modal) {
+            modal.style.display = 'none';
+            document.body.style.overflow = 'auto';
         }
-        modal.style.display = 'none';
-        document.body.style.overflow = 'auto';
-        console.log('模態框已關閉');
     }
 
     // 打開模態框的函數
     function openModal(modal) {
-        if (!modal) {
-            console.error('嘗試打開不存在的模態框');
-            return;
+        if (modal) {
+            modal.style.display = 'flex';
+            document.body.style.overflow = 'hidden';
         }
-        modal.style.display = 'flex';
-        document.body.style.overflow = 'hidden';
-        console.log('模態框已打開');
     }
 
     // 找到所有帶有 cybermaidTrigger class 的元素並添加點擊事件
     document.querySelectorAll('.cybermaidTrigger').forEach(trigger => {
         trigger.addEventListener('click', function(e) {
             e.preventDefault();
-            console.log('產品觸發器被點擊');
             
             if (checkAgeVerification()) {
-                console.log('用戶已驗證年齡，直接打開產品詳情');
                 openModal(productModal);
             } else {
-                console.log('用戶未驗證年齡，顯示年齡確認模態框');
                 openModal(ageModal);
             }
         });
@@ -177,7 +161,6 @@ window.addEventListener('load', function() {
     // 確認年齡
     if (confirmBtn) {
         confirmBtn.addEventListener('click', function() {
-            console.log('用戶確認年齡');
             localStorage.setItem('ageVerified', 'true');
             closeModal(ageModal);
             openModal(productModal);
@@ -187,7 +170,6 @@ window.addEventListener('load', function() {
     // 拒絕年齡
     if (denyBtn) {
         denyBtn.addEventListener('click', function() {
-            console.log('用戶拒絕年齡確認');
             closeModal(ageModal);
             alert('很抱歉，您必須成年才能瀏覽此內容。');
         });
@@ -196,7 +178,6 @@ window.addEventListener('load', function() {
     // 關閉產品詳情
     if (closeBtn) {
         closeBtn.addEventListener('click', function() {
-            console.log('用戶關閉產品詳情');
             closeModal(productModal);
         });
     }
@@ -204,11 +185,9 @@ window.addEventListener('load', function() {
     // 點擊模態框背景關閉
     window.onclick = function(e) {
         if (e.target === productModal) {
-            console.log('點擊產品詳情背景關閉');
             closeModal(productModal);
         }
         if (e.target === ageModal) {
-            console.log('點擊年齡確認背景關閉');
             closeModal(ageModal);
         }
     };
