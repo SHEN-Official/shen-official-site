@@ -124,8 +124,17 @@ function getCurrentLanguage() {
     if (savedLang) {
         return savedLang;
     }
+    
+    // 獲取瀏覽器語言
     const browserLang = navigator.language || navigator.userLanguage;
-    return browserLang.startsWith('zh') ? 'zh-TW' : 'en';
+    
+    // 如果明確是中文，則使用中文
+    if (browserLang.startsWith('zh')) {
+        return 'zh-TW';
+    }
+    
+    // 其他情況（包括英文或其他語言）都使用英文
+    return 'en';
 }
 
 function setLanguage(lang) {

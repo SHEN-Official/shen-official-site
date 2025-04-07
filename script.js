@@ -171,7 +171,12 @@ document.addEventListener('DOMContentLoaded', function() {
     if (denyBtn) {
         denyBtn.addEventListener('click', function() {
             closeModal(ageModal);
-            alert('很抱歉，您必須成年才能瀏覽此內容。');
+            // 根據當前語言顯示不同的提示
+            const currentLang = localStorage.getItem('preferred_language') || 'en';
+            const message = currentLang === 'zh-TW' ? 
+                '很抱歉，您必須成年才能瀏覽此內容。' : 
+                'Sorry, you must be an adult to view this content.';
+            alert(message);
         });
     }
 
