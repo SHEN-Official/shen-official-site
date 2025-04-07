@@ -54,7 +54,7 @@ const translations = {
 
         // 頁尾
         'footer_contact': '聯絡資訊',
-        'footer_email': '信箱：',
+        'footer_email': '',
         'footer_follow': '追蹤我們',
         'footer_rights': '保留一切權利'
     },
@@ -112,7 +112,7 @@ const translations = {
 
         // Footer
         'footer_contact': 'Contact',
-        'footer_email': 'Email:',
+        'footer_email': '',
         'footer_follow': 'Follow Us',
         'footer_rights': 'All rights reserved'
     }
