@@ -188,7 +188,11 @@ function updatePageContent(lang) {
 
     // 更新頁尾
     document.querySelector('.footer-section:nth-child(1) h4').textContent = t.footer_contact;
-    document.querySelector('.footer-section:nth-child(1) p').textContent = 'contact@shen.technology';
+    const emailLink = document.querySelector('.footer-section:nth-child(1) a');
+    if (emailLink) {
+        emailLink.textContent = 'contact@shen.technology';
+        emailLink.href = 'mailto:contact@shen.technology';
+    }
     document.querySelector('.footer-section:nth-child(2) h4').textContent = t.footer_follow;
     document.querySelector('.footer-bottom p').innerHTML = 
         `&copy; ${new Date().getFullYear()} 神 Shen. ${t.footer_rights}`;
