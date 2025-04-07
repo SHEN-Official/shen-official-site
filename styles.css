@@ -77,8 +77,9 @@ body {
 
 .language-switcher {
     position: relative;
-    display: flex; /* 確保始終顯示 */
+    display: flex !important; /* 強制顯示 */
     align-items: center;
+    z-index: 1002; /* 確保在最上層 */
 }
 
 .lang-btn {
@@ -112,6 +113,13 @@ body {
     .lang-btn span {
         font-size: 12px;
     }
+    
+    /* 確保語言切換按鈕在手機版上可見 */
+    .language-switcher {
+        display: flex !important;
+        position: relative;
+        z-index: 1002;
+    }
 }
 
 /* 針對直向手機模式的特殊處理 */
@@ -123,6 +131,8 @@ body {
     
     .language-switcher {
         display: flex !important;
+        position: relative;
+        z-index: 1002;
     }
     
     .lang-btn span {
@@ -143,6 +153,8 @@ body {
     
     .language-switcher {
         display: flex !important;
+        position: relative;
+        z-index: 1002;
     }
     
     .lang-btn {
@@ -155,6 +167,39 @@ body {
     
     .lang-btn span {
         display: none;
+    }
+}
+
+/* 新增：專門針對手機直向模式的處理 */
+@media (max-width: 734px) and (orientation: portrait) {
+    .nav-content {
+        padding: 0 5%;
+        justify-content: space-between;
+    }
+    
+    .language-switcher {
+        display: flex !important;
+        position: absolute;
+        right: 5%;
+        z-index: 1002;
+    }
+    
+    .lang-btn {
+        padding: 6px;
+    }
+    
+    .lang-btn i {
+        font-size: 20px;
+        margin-right: 0;
+    }
+    
+    .lang-btn span {
+        display: none;
+    }
+    
+    .nav-links {
+        display: flex !important;
+        margin-right: 40px; /* 為語言切換按鈕留出空間 */
     }
 }
 
@@ -516,6 +561,9 @@ footer {
     
     .language-switcher {
         margin-left: auto;
+        display: flex !important;
+        position: relative;
+        z-index: 1002;
     }
 
     .section {
