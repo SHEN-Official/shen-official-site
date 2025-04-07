@@ -888,4 +888,30 @@ h2 {
     .language-switcher span::before {
         margin-right: 4px;
     }
+}
+
+/* 新增：針對手機直向的設定 */
+@media (max-width: 428px) and (orientation: portrait) {
+    .nav-right {
+        gap: 12px;
+    }
+
+    .language-switcher {
+        padding: 4px;
+    }
+
+    .language-switcher span {
+        font-size: 12px;
+    }
+
+    .language-switcher span::before {
+        content: "🌐";
+        margin-right: 4px;
+        font-size: 14px;
+        display: inline-block;
+    }
+
+    .nav-link {
+        font-size: 12px;
+    }
 } 
