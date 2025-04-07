@@ -9,6 +9,9 @@
     <meta http-equiv="X-Frame-Options" content="SAMEORIGIN">
     <meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin">
     <meta http-equiv="Permissions-Policy" content="geolocation=(), microphone=(), camera=()">
+    <!-- SEO 相關設置 -->
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://shen.technology">
     <!-- 網站描述和關鍵字 -->
     <meta name="description" content="神 Shen | CyberMaid - 探索全新的虛擬世界">
     <meta name="keywords" content="CyberMaid, 虛擬世界, 神 Shen, 遊戲">
@@ -23,6 +26,36 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700&display=swap" rel="stylesheet">
     <!-- 網站圖標將在添加相應文件後再設置 -->
+    <!-- 結構化數據 -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "神 Shen | CyberMaid",
+      "url": "https://shen.technology",
+      "description": "探索全新的虛擬世界",
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": "https://shen.technology/search?q={search_term_string}",
+        "query-input": "required name=search_term_string"
+      }
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Product",
+      "name": "CyberMaid",
+      "description": "為您打造專屬的虛擬伴侶，讓每個工作時光都充滿溫暖與樂趣。",
+      "image": "./assets/store_capsule_header.png",
+      "offers": {
+        "@type": "Offer",
+        "url": "https://store.steampowered.com/app/3584720/CyberMaid/?l=tchinese",
+        "priceCurrency": "TWD",
+        "availability": "https://schema.org/InStock"
+      }
+    }
+    </script>
 </head>
 <body>
     <!-- 導航欄 -->
