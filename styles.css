@@ -47,7 +47,7 @@ body {
 .nav-right {
     display: flex;
     align-items: center;
-    gap: 24px;
+    gap: 16px;
 }
 
 .nav-link {
@@ -59,17 +59,21 @@ body {
 .language-switcher {
     display: flex;
     align-items: center;
-    gap: 8px;
+    gap: 6px;
     font-size: 14px;
-}
-
-.language-switcher i {
-    font-size: 16px;
-    color: #666;
+    cursor: pointer;
+    padding: 4px 8px;
+    border-radius: 4px;
+    transition: background-color 0.2s;
 }
 
 .language-switcher:hover {
-    background: rgba(0, 0, 0, 0.05);
+    background-color: rgba(0, 0, 0, 0.05);
+}
+
+.language-switcher i {
+    font-size: 14px;
+    color: #666;
 }
 
 .language-switcher span {
