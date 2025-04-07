@@ -33,6 +33,7 @@ body {
     justify-content: space-between;
     align-items: center;
     height: 100%;
+    position: relative; /* 添加相對定位 */
 }
 
 .logo {
@@ -53,6 +54,7 @@ body {
     gap: 2.4rem;
     align-items: center;
     height: 100%;
+    margin-left: auto; /* 確保導航連結靠右 */
 }
 
 .nav-links a {
@@ -75,6 +77,8 @@ body {
 
 .language-switcher {
     position: relative;
+    display: flex; /* 確保始終顯示 */
+    align-items: center;
 }
 
 .lang-btn {
@@ -89,6 +93,14 @@ body {
 
 /* 確保語言按鈕在手機版上可見 */
 @media (max-width: 734px) {
+    .nav-content {
+        padding: 0 5%;
+    }
+    
+    .nav-links {
+        gap: 1rem;
+    }
+    
     .lang-btn {
         padding: 6px;
     }
@@ -110,8 +122,7 @@ body {
     }
     
     .language-switcher {
-        margin-left: auto;
-        display: block !important;
+        display: flex !important;
     }
     
     .lang-btn span {
@@ -121,6 +132,29 @@ body {
     .lang-btn i {
         font-size: 18px;
         margin-right: 0;
+    }
+}
+
+/* 確保在所有設備上都能看到語言切換按鈕 */
+@media (max-width: 480px) {
+    .nav-links {
+        display: flex !important;
+    }
+    
+    .language-switcher {
+        display: flex !important;
+    }
+    
+    .lang-btn {
+        padding: 6px;
+    }
+    
+    .lang-btn i {
+        font-size: 18px;
+    }
+    
+    .lang-btn span {
+        display: none;
     }
 }
 
