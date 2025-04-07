@@ -9,7 +9,8 @@ body {
     font-family: 'Noto Sans TC', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
     line-height: 1.6;
     color: #1d1d1f;
-    background-color: #ffffff;
+    background-color: #f5f5f7; /* Apple 網站使用的背景色 */
+    overflow-y: scroll;
 }
 
 /* Navigation */
@@ -21,15 +22,17 @@ body {
     backdrop-filter: blur(20px);
     -webkit-backdrop-filter: blur(20px);
     z-index: 1000;
+    height: 44px;
 }
 
 .nav-content {
-    max-width: 1200px;
+    max-width: 1024px;
     margin: 0 auto;
-    padding: 0.8rem 2rem;
+    padding: 0 8.33333%;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    height: 100%;
 }
 
 .logo {
@@ -39,7 +42,7 @@ body {
 }
 
 .logo-image {
-    height: 40px;
+    height: 32px;
     width: auto;
     display: block;
 }
@@ -47,22 +50,29 @@ body {
 .nav-links {
     display: flex;
     list-style: none;
-    gap: 2rem;
+    gap: 2.4rem;
     align-items: center;
+    height: 100%;
 }
 
 .nav-links a {
-    color: #1d1d1f;
+    color: rgba(0, 0, 0, 0.8);
     text-decoration: none;
-    font-size: 1rem;
+    font-size: 12px;
+    font-weight: 400;
+    letter-spacing: -0.01em;
     transition: color 0.3s ease;
+    padding: 0;
+    height: 100%;
+    display: flex;
+    align-items: center;
 }
 
 .nav-links a:hover {
-    color: #0066cc;
+    color: #000000;
+    background-color: transparent;
 }
 
-/* Language Switcher */
 .language-switcher {
     position: relative;
 }
@@ -70,46 +80,35 @@ body {
 .lang-btn {
     display: flex;
     align-items: center;
-    padding: 0.5rem;
-    border-radius: 50%;
-    transition: background-color 0.3s ease;
-}
-
-.lang-btn:hover {
-    background-color: rgba(0, 0, 0, 0.1);
-}
-
-.lang-btn i {
-    font-size: 1.2rem;
+    gap: 8px;
+    padding: 8px;
+    cursor: pointer;
+    color: #1d1d1f;
+    text-decoration: none;
 }
 
 .language-dropdown {
+    display: none;
     position: absolute;
     top: 100%;
     right: 0;
-    background-color: #ffffff;
-    border-radius: 12px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-    padding: 0.5rem 0;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    padding: 8px 0;
     min-width: 120px;
-    opacity: 0;
-    visibility: hidden;
-    transform: translateY(10px);
-    transition: all 0.3s ease;
 }
 
-.language-switcher:hover .language-dropdown {
-    opacity: 1;
-    visibility: visible;
-    transform: translateY(0);
+.language-dropdown.show {
+    display: block;
 }
 
 .language-dropdown a {
     display: block;
-    padding: 0.5rem 1rem;
+    padding: 8px 16px;
     color: #1d1d1f;
-    font-size: 0.9rem;
-    transition: background-color 0.3s ease;
+    text-decoration: none;
+    transition: background-color 0.2s;
 }
 
 .language-dropdown a:hover {
@@ -117,39 +116,194 @@ body {
 }
 
 .language-dropdown a.active {
-    color: #0066cc;
-    font-weight: 500;
+    background-color: #f5f5f7;
 }
 
 /* Hero Section */
 .hero-section {
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    background-color: #fbfbfd;
+    min-height: 100vh;
     padding-top: 44px;
+    display: flex;
+    flex-direction: column;
+    background-color: #f5f5f7; /* 與背景色匹配 */
 }
 
 .hero-content {
-    max-width: 800px;
-    padding: 2rem;
+    text-align: left;
+    padding: 5rem 8.33333% 2rem;  /* 增加上方間距 */
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
 }
 
 .hero-content h1 {
-    font-size: 4rem;
+    font-size: 76px;  /* 稍微調小一點 */
+    line-height: 1.1;  /* 調整行高 */
     font-weight: 700;
-    margin-bottom: 1rem;
-    background: linear-gradient(45deg, #000000, #666666);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    letter-spacing: -.015em;
+    color: #000000;
+    margin-bottom: 0.3em;  /* 減少與副標題的間距 */
+    max-width: 800px;
 }
 
 .hero-subtitle {
-    font-size: 1.5rem;
+    font-size: 21px;
+    font-weight: 500;
+    margin-top: 4px;  /* 調整與標題的間距 */
+    margin-bottom: 16px;  /* 添加下方間距 */
+    color: #1d1d1f;
+    max-width: 600px;  /* 限制寬度提升可讀性 */
+    line-height: 1.4;  /* 調整行高 */
+}
+
+.product-showcase {
+    width: 100%;
+    padding: 0 2rem;
+    margin-top: 2rem;
+}
+
+.product-grid {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem 8.33333%;
+    display: grid;
+    grid-template-columns: minmax(auto, 600px);
+    justify-content: start;
+    gap: 2rem;
+}
+
+.product-item {
+    text-decoration: none;
+    color: #1d1d1f;
+    text-align: left;
+    transition: all 0.3s ease;
+}
+
+.product-image-container {
+    width: 100%;
+    max-width: 600px;
+    aspect-ratio: 16/9;
+    overflow: hidden;
+    border-radius: 18px;
+    margin-bottom: 1rem;
+    background: #fbfbfd;
+    box-shadow: 2px 4px 12px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease;
+}
+
+.product-item:hover .product-image-container {
+    box-shadow: 2px 4px 16px rgba(0, 0, 0, 0.12);
+    transform: scale(1.01);
+}
+
+.product-image {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    transition: transform 0.3s ease;
+}
+
+.product-item:hover .product-image {
+    transform: scale(1.02);
+}
+
+.product-item h2 {
+    font-size: 24px;
+    line-height: 1.16667;
+    font-weight: 600;
+    letter-spacing: .009em;
+    margin: 0.5rem 0;
+}
+
+.product-tag {
+    color: #06c;
+    font-size: 17px;
+    line-height: 1.23536;
+    font-weight: 400;
+    letter-spacing: -.022em;
+}
+
+.coming-soon .placeholder {
+    background: #f5f5f7;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.placeholder-content {
+    font-size: 24px;
     color: #86868b;
-    margin-bottom: 2rem;
+}
+
+@media (max-width: 734px) {
+    .nav-content {
+        padding: 0.8rem 5%;
+    }
+    
+    .hero-content {
+        padding-top: 4rem;  /* 手機版上方間距 */
+    }
+    
+    .hero-content h1 {
+        font-size: 38px;  /* 手機版標題大小 */
+        line-height: 1.1;
+        letter-spacing: -.01em;
+    }
+    
+    .hero-subtitle {
+        font-size: 17px;
+        margin-top: 4px;
+        margin-bottom: 12px;
+    }
+    
+    .product-grid {
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+    
+    .product-image-container {
+        max-width: 100%;
+        aspect-ratio: 16/9;
+    }
+    
+    .product-item h2 {
+        font-size: 21px;
+    }
+
+    .logo-image {
+        height: 30px;
+    }
+}
+
+@media (min-width: 735px) and (max-width: 1068px) {
+    .nav-content {
+        padding: 0.8rem 6%;
+    }
+    
+    .hero-content {
+        padding-top: 4.5rem;
+    }
+    
+    .hero-content h1 {
+        font-size: 54px;
+        line-height: 1.07;
+        letter-spacing: -.015em;
+    }
+    
+    .hero-subtitle {
+        font-size: 21px;
+        margin-top: 4px;
+        margin-bottom: 14px;
+    }
+    
+    .product-grid {
+        padding-left: 6%;
+        padding-right: 6%;
+    }
+    
+    .product-image-container {
+        max-width: 500px;
+    }
 }
 
 /* Sections */
@@ -176,13 +330,16 @@ body {
     background-color: #0066cc;
     color: white;
     text-decoration: none;
-    border-radius: 30px;
-    font-size: 1.1rem;
-    transition: background-color 0.3s ease;
+    border-radius: 8px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    margin-top: 1rem;
 }
 
 .cta-button:hover {
-    background-color: #0077ed;
+    background-color: #004499;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 102, 204, 0.2);
 }
 
 /* Contact Form */
@@ -231,8 +388,8 @@ body {
 
 /* Footer */
 footer {
-    padding: 4rem 2rem 2rem;
-    background-color: #ffffff;
+    padding: 4rem 8.33333% 2rem;
+    background-color: #f5f5f7; /* Apple 網站使用的頁尾背景色 */
 }
 
 .footer-content {
@@ -250,17 +407,16 @@ footer {
 }
 
 .footer-section p {
-    color: #1d1d1f;
+    color: #86868b;
 }
 
 .social-links {
     display: flex;
     gap: 1rem;
-    margin-top: 1rem;
 }
 
 .social-links a {
-    color: #1d1d1f;
+    color: #515154;
     font-size: 1.5rem;
     transition: color 0.3s ease;
 }
@@ -272,10 +428,11 @@ footer {
 .footer-bottom {
     max-width: 1200px;
     margin: 2rem auto 0;
-    padding-top: 2rem;
+    padding-top: 1rem;
     border-top: 1px solid #d2d2d7;
     text-align: center;
-    color: #1d1d1f;
+    color: #86868b;
+    font-size: 0.9rem;
 }
 
 /* Responsive Design */
@@ -284,15 +441,422 @@ footer {
         display: none;
     }
 
-    .hero-content h1 {
-        font-size: 2.5rem;
-    }
-
-    .hero-subtitle {
-        font-size: 1.2rem;
-    }
-
     .section {
         padding: 4rem 1rem;
+    }
+}
+
+.product-menu {
+    position: relative;
+}
+
+.product-menu a {
+    position: relative;
+    padding: 0.5rem 0;
+}
+
+.product-menu a:after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #0066cc;
+    transition: width 0.3s ease;
+}
+
+.product-menu a:hover:after {
+    width: 100%;
+}
+
+/* 產品詳情模態框 */
+.product-modal .modal-content {
+    background-color: #f5f5f7; /* 與背景色匹配 */
+    padding: 2rem;
+    border-radius: 12px;
+    width: 90%;
+    max-width: 800px;
+    max-height: 85vh;
+    overflow-y: auto;
+    position: relative;
+    z-index: 1001;
+}
+
+/* 關閉按鈕 */
+.close-button {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background: rgba(0, 0, 0, 0.1);
+    border: none;
+    cursor: pointer;
+    font-size: 24px;
+    color: #666;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+
+.close-button:hover {
+    background: rgba(0, 0, 0, 0.2);
+}
+
+@media (max-width: 734px) {
+    .product-modal .modal-content {
+        margin: 1rem auto;
+        width: 95%;
+        padding: 1.5rem;
+    }
+
+    .age-check-content {
+        width: 280px;
+        padding: 1.2rem;
+    }
+}
+
+🌟 開啟你的專屬桌面美好時光 🌟
+立即體驗，讓 CyberMaid 為你的電腦帶來無限活力與溫暖！ 
+
+🎮 操作說明 🎮
+
+🖱️ 滑鼠左鍵：拖曳移動女僕
+🖱️ 滑鼠左鍵雙擊：喚出設定選單
+🖱️ 滑鼠右鍵：與女僕互動，觸發可愛反應
+🎯 滑鼠中鍵滾輪：調整女僕的遠近視角
+
+【建議新增】
+⚙️ 自定義快捷鍵：設定你專屬的互動方式
+🎨 換裝系統：隨時更換女僕的造型與表情 
+
+🔥 適合這些玩家：
+
+✓ 喜愛二次元角色與女僕文化的粉絲
+✓ 想要桌面陪伴感的學生、上班族與直播主
+✓ 追求個性化桌面，讓美學與趣味兼具的玩家
+
+【建議新增】
+✓ 熱愛與虛擬角色互動的動漫愛好者
+✓ 尋找工作時光中的療癒體驗者 
+
+🎀 主要特色：
+
+💕 甜美視線追蹤：她的眼神將緊隨你的滑鼠移動，讓你感受到她的關注！
+💭 輕鬆互動體驗：點擊她的特定部位，觸發可愛反應，發掘更多樂趣！
+
+【建議新增】
+✨ 個性化互動：每位女僕都有獨特的性格和反應，創造專屬於你的互動體驗
+🎵 動態語音系統：即時回應你的互動，溫柔的聲音讓工作更有趣
+🌈 豐富的造型選擇：多樣化的服裝和配飾，讓你的專屬女僕更具個性 
+
+新世代桌面互動體驗，為你的電腦注入生命！ 
+
+《CyberMaid》——你的專屬女僕，貼心陪伴！
+✨ 最萌桌面女僕，讓你的電腦充滿活力！✨ 
+
+/* 添加隱藏類 */
+.hidden {
+    display: none !important;
+}
+
+.modal-header h2 {
+    font-size: 32px;
+    line-height: 1.1;
+    font-weight: 600;
+    color: #1d1d1f;
+    margin-bottom: 0.5rem;
+}
+
+.modal-header p {
+    font-size: 21px;
+    line-height: 1.4;
+    color: #86868b;
+}
+
+.modal-body h3 {
+    font-size: 28px;
+    margin-bottom: 1rem;
+}
+
+.modal-body h4 {
+    font-size: 21px;
+    margin: 1.5rem 0 1rem;
+    color: #1d1d1f;
+}
+
+.modal-body ul {
+    list-style: none;
+    margin-bottom: 1.5rem;
+}
+
+.modal-body li {
+    margin-bottom: 0.5rem;
+    padding-left: 1.5rem;
+    position: relative;
+}
+
+.cta-section {
+    margin-top: 2rem;
+    text-align: center;
+}
+
+.cta-button {
+    display: inline-block;
+    padding: 1rem 2rem;
+    background-color: #0066cc;
+    color: white;
+    text-decoration: none;
+    border-radius: 30px;
+    font-size: 17px;
+    margin-top: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: #0077ed;
+}
+
+/* 商店按鈕樣式 */
+.store-buttons {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    margin-top: 2rem;
+}
+
+.store-button {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 0.8rem 1.5rem;
+    background-color: #1b2838;
+    color: white;
+    text-decoration: none;
+    border-radius: 12px;
+    min-width: 200px;
+}
+
+.store-button i {
+    font-size: 1.8rem;
+}
+
+.store-button-text {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.store-name {
+    font-size: 0.9rem;
+    opacity: 0.8;
+}
+
+.store-action {
+    font-size: 1.1rem;
+    font-weight: 500;
+}
+
+/* Steam 商店按鈕特定樣式 */
+.steam-button {
+    background: linear-gradient(to right, #1b2838, #2a475e);
+}
+
+@media (max-width: 768px) {
+    .store-buttons {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .store-button {
+        width: 100%;
+        justify-content: center;
+    }
+}
+
+/* 確保模態框內容有足夠的上方間距 */
+.modal-header {
+    padding-top: 1rem;
+    padding-right: 40px; /* 為關閉按鈕留出空間 */
+}
+
+/* 年齡確認模態框的關閉按鈕 */
+.age-check-modal .close-button {
+    display: none; /* 年齡確認不需要關閉按鈕 */
+}
+
+/* 基本模態框樣式 */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background-color: #fff;
+    padding: 2rem;
+    border-radius: 12px;
+    position: relative;
+}
+
+/* 年齡確認模態框樣式 */
+.age-check-content {
+    background-color: #f5f5f7; /* 與背景色匹配 */
+    padding: 2rem;
+    border-radius: 10px;
+    max-width: 500px;
+    width: 90%;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.age-check-content h2 {
+    color: #333;
+    margin-bottom: 1rem;
+    font-size: 1.8rem;
+}
+
+.age-check-content p {
+    color: #666;
+    margin-bottom: 1rem;
+    line-height: 1.5;
+}
+
+.age-warning {
+    color: #e74c3c !important;
+    font-weight: 500;
+    margin: 1.5rem 0;
+}
+
+.age-check-buttons {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    margin-top: 2rem;
+}
+
+.age-confirm-btn,
+.age-deny-btn {
+    padding: 0.8rem 1.5rem;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.age-confirm-btn {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.age-confirm-btn:hover {
+    background-color: #45a049;
+}
+
+.age-deny-btn {
+    background-color: #f44336;
+    color: white;
+}
+
+.age-deny-btn:hover {
+    background-color: #da190b;
+}
+
+@media (max-width: 768px) {
+    .age-check-buttons {
+        flex-direction: column;
+    }
+    
+    .age-confirm-btn,
+    .age-deny-btn {
+        width: 100%;
+    }
+}
+
+.product-nav {
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    white-space: nowrap;
+    padding: 14px 0;
+    margin-top: 44px;
+    border-bottom: 1px solid #d2d2d7;
+}
+
+.product-nav-content {
+    max-width: 1024px;
+    margin: 0 auto;
+    padding: 0 8.33333%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.product-nav-item {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none;
+    color: #1d1d1f;
+    font-size: 12px;
+    min-width: 60px;
+    transition: color 0.3s ease;
+    padding: 0 5px;
+}
+
+.product-nav-item:hover {
+    color: #06c;
+}
+
+.product-nav-icon {
+    width: 24px;
+    height: 24px;
+    margin-bottom: 8px;
+    object-fit: contain;
+}
+
+.product-nav-label {
+    font-size: 12px;
+    line-height: 1.33337;
+    font-weight: 400;
+    letter-spacing: -.01em;
+    text-align: center;
+    white-space: nowrap;
+}
+
+.product-nav-new {
+    color: #bf4800;
+    font-size: 10px;
+    line-height: 1.2;
+    margin-top: 3px;
+    font-weight: 500;
+}
+
+@media (max-width: 734px) {
+    .product-nav {
+        padding: 12px 0;
+    }
+    
+    .product-nav-content {
+        padding: 0 20px;
+    }
+    
+    .product-nav-icon {
+        width: 20px;
+        height: 20px;
     }
 } 

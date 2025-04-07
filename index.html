@@ -3,68 +3,170 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>神 Shen | 首頁</title>
+    <title>神 Shen | CyberMaid</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700&display=swap" rel="stylesheet">
 </head>
 <body>
+    <!-- 導航欄 -->
     <nav class="nav-container">
         <div class="nav-content">
-            <a href="#" class="logo">
-                <img src="assets/temp-logo.svg" alt="神 Shen" class="logo-image">
+            <a href="index.html" class="logo">
+                <img src="assets/Shen_Logo_Word.svg" alt="神 Shen" class="logo-image">
             </a>
             <ul class="nav-links">
-                <li><a href="#products">產品</a></li>
-                <li><a href="#support">支援服務</a></li>
+                <li><a href="#" class="cybermaid-link cybermaidTrigger">CyberMaid</a></li>
                 <li class="language-switcher">
-                    <a href="#" class="lang-btn">
+                    <a href="javascript:void(0)" class="lang-btn">
                         <i class="fas fa-globe"></i>
+                        <span>繁體中文</span>
                     </a>
                     <div class="language-dropdown">
-                        <a href="#" class="active">繁體中文</a>
-                        <a href="#">English</a>
+                        <a href="javascript:void(0)" data-lang="zh-TW" class="active">繁體中文</a>
+                        <a href="javascript:void(0)" data-lang="en">English</a>
                     </div>
                 </li>
             </ul>
         </div>
     </nav>
 
+    <!-- 產品導航列 -->
+    <div class="product-nav">
+        <div class="product-nav-content">
+            <a href="#" class="product-nav-item cybermaidTrigger">
+                <img src="assets/MaidHeadband.svg" alt="CyberMaid" class="product-nav-icon">
+                <span class="product-nav-label">CyberMaid</span>
+                <span class="product-nav-new">全新</span>
+            </a>
+        </div>
+    </div>
+
+    <!-- 主要內容 -->
     <main>
         <section id="hero" class="hero-section">
             <div class="hero-content">
-                <h1>創新科技的未來</h1>
-                <p class="hero-subtitle">突破界限，創造可能</p>
-                <a href="#learn-more" class="cta-button">了解更多</a>
+                <h1>CyberMaid</h1>
+                <p class="hero-subtitle">探索全新的虛擬世界</p>
+            </div>
+            <div class="product-showcase">
+                <div class="product-grid">
+                    <a href="#" class="product-item cybermaidTrigger">
+                        <div class="product-image-container">
+                            <img src="assets/store_capsule_header.png" alt="CyberMaid" class="product-image">
+                        </div>
+                        <h2>CyberMaid</h2>
+                        <span class="product-tag">立即遊玩 ></span>
+                    </a>
+                </div>
             </div>
         </section>
     </main>
 
+    <!-- 年齡確認模態框 -->
+    <div id="ageCheckModal" class="modal">
+        <div class="age-check-content">
+            <h2>年齡確認</h2>
+            <p>本內容需要年齡確認才能瀏覽。</p>
+            <div class="age-check-buttons">
+                <button class="age-confirm-btn">是，我已成年</button>
+                <button class="age-deny-btn">否，我未成年</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- 產品詳情模態框 -->
+    <div id="productModal" class="modal product-modal">
+        <div class="modal-content product-content">
+            <button class="close-button">&times;</button>
+            <div class="modal-header">
+                <h2>為您打造專屬的虛擬伴侶，</h2>
+                <p>讓每個工作時光都充滿溫暖與樂趣。</p>
+            </div>
+            <div class="modal-body">
+                <h3>《CyberMaid》——你的專屬女僕，貼心陪伴！</h3>
+                <h4>✨ 最萌桌面女僕，讓你的電腦充滿活力！✨</h4>
+                <p>新世代桌面互動體驗，為你的電腦注入生命！</p>
+                
+                <div class="video-container">
+                    <iframe 
+                        width="100%" 
+                        height="315" 
+                        src="https://www.youtube.com/embed/YGeWNNv9qzo" 
+                        title="CyberMaid 介紹影片" 
+                        frameborder="0" 
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                        allowfullscreen>
+                    </iframe>
+                </div>
+
+                <h4>🎀 主要特色：</h4>
+                <ul>
+                    <li>💕 甜美視線追蹤：她的眼神將緊隨你的滑鼠移動，讓你感受到她的關注！</li>
+                    <li>💭 輕鬆互動體驗：點擊她的特定部位，觸發可愛反應，發掘更多樂趣！</li>
+                    <li>✨ 個性化互動：每位女僕都有獨特的性格和反應，創造專屬於你的互動體驗</li>
+                    <li>🎵 動態語音系統：即時回應你的互動，溫柔的聲音讓工作更有趣</li>
+                    <li>🌈 豐富的造型選擇：多樣化的服裝和配飾，讓你的專屬女僕更具個性</li>
+                </ul>
+
+                <h4>🔥 適合這些玩家：</h4>
+                <ul>
+                    <li>✓ 喜愛二次元角色與女僕文化的粉絲</li>
+                    <li>✓ 想要桌面陪伴感的學生、上班族與直播主</li>
+                    <li>✓ 追求個性化桌面，讓美學與趣味兼具的玩家</li>
+                    <li>✓ 熱愛與虛擬角色互動的動漫愛好者</li>
+                    <li>✓ 尋找工作時光中的療癒體驗者</li>
+                </ul>
+
+                <div class="cta-section">
+                    <h4>🌟 開啟你的專屬桌面美好時光 🌟</h4>
+                    <p>立即體驗，讓 CyberMaid 為你的電腦帶來無限活力與溫暖！</p>
+                    <div class="store-buttons">
+                        <a href="https://store.steampowered.com/app/3584720/CyberMaid/?l=tchinese" class="store-button steam-button" target="_blank" rel="noopener noreferrer">
+                            <i class="fab fa-steam"></i>
+                            <div class="store-button-text">
+                                <span class="store-name">Steam</span>
+                                <span class="store-action">立即購買</span>
+                            </div>
+                        </a>
+                        <!-- 預留其他商店的位置 -->
+                        <!--
+                        <a href="#" class="store-button epic-button" target="_blank" rel="noopener noreferrer">
+                            <img src="assets/epic-games.svg" alt="Epic Games" class="store-icon">
+                            <div class="store-button-text">
+                                <span class="store-name">Epic Games</span>
+                                <span class="store-action">即將推出</span>
+                            </div>
+                        </a>
+                        -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 頁尾 -->
     <footer>
         <div class="footer-content">
             <div class="footer-section">
-                <h4>神 Shen</h4>
-                <p>創新科技的未來</p>
-            </div>
-            <div class="footer-section">
                 <h4>聯絡資訊</h4>
-                <p>電話：(02) 1234-5678</p>
-                <p>信箱：contact@shen.com</p>
+                <p>信箱：contact@shen.technology</p>
             </div>
             <div class="footer-section">
                 <h4>追蹤我們</h4>
                 <div class="social-links">
-                    <a href="#"><i class="fab fa-facebook"></i></a>
-                    <a href="#"><i class="fab fa-twitter"></i></a>
-                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                    <a href="https://www.facebook.com/shen.technology" target="_blank" rel="noopener noreferrer"><i class="fab fa-facebook"></i></a>
+                    <a href="https://twitter.com/shen_technology" target="_blank" rel="noopener noreferrer"><i class="fab fa-twitter"></i></a>
+                    <a href="https://www.linkedin.com/company/shen-technology" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin"></i></a>
                 </div>
             </div>
         </div>
         <div class="footer-bottom">
-            <p>&copy; 2024 神 Shen. All rights reserved.</p>
+            <p>&copy; <script>document.write(new Date().getFullYear())</script> 神 Shen. All rights reserved.</p>
         </div>
     </footer>
 
+    <script src="translations.js"></script>
     <script src="script.js"></script>
 </body>
 </html> 
