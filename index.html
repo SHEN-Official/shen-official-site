@@ -12,16 +12,22 @@
     <!-- 導航欄 -->
     <nav class="nav-container">
         <div class="nav-content">
-            <a href="/" class="logo">
-                <img src="assets/Shen_Logo_Word.svg" alt="神" class="logo-image">
+            <a href="index.html" class="logo">
+                <img src="assets/Shen_Logo_Word.svg" alt="神 Shen" class="logo-image">
             </a>
-            <div class="nav-right">
-                <a href="#" class="nav-link">CyberMaid</a>
-                <div class="language-switcher" onclick="toggleLanguage()">
-                    <i class="fas fa-globe"></i>
-                    <span id="currentLang">繁體中文</span>
-                </div>
-            </div>
+            <ul class="nav-links">
+                <li><a href="#" class="cybermaid-link cybermaidTrigger">CyberMaid</a></li>
+                <li class="language-switcher">
+                    <a href="javascript:void(0)" class="lang-btn">
+                        <i class="fas fa-globe"></i>
+                        <span>繁體中文</span>
+                    </a>
+                    <div class="language-dropdown">
+                        <a href="javascript:void(0)" data-lang="zh-TW" class="active">繁體中文</a>
+                        <a href="javascript:void(0)" data-lang="en">English</a>
+                    </div>
+                </li>
+            </ul>
         </div>
     </nav>
 

@@ -220,17 +220,4 @@ document.querySelectorAll('.cybermaidTrigger').forEach(trigger => {
         e.preventDefault();
         showAgeCheckModal();
     });
-});
-
-let isEnglish = false;
-
-function toggleLanguage() {
-    const langSpan = document.getElementById('currentLang');
-    isEnglish = !isEnglish;
-    
-    if (isEnglish) {
-        langSpan.textContent = 'English';
-    } else {
-        langSpan.textContent = '繁體中文';
-    }
-} 
+}); 
