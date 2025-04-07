@@ -74,7 +74,15 @@ body {
 }
 
 .language-switcher {
-    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 14px;
+}
+
+.language-switcher::before {
+    content: "🌐";
+    font-size: 16px;
 }
 
 .lang-btn {
