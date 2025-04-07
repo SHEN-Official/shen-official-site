@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+Disallow: /assets/
+Disallow: /translations.js
+Disallow: /script.js
+Disallow: /styles.css
+
+Sitemap: https://shen.technology/sitemap.xml 
