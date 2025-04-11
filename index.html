@@ -3,13 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- 最低限度的安全設置 -->
-    <meta http-equiv="Content-Security-Policy" content="default-src * 'unsafe-inline' 'unsafe-eval' data: blob:;">
+    <!-- 安全相關設置 -->
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self' https:; script-src 'self' 'unsafe-inline' https:; style-src 'self' 'unsafe-inline' https:; img-src 'self' data: https:; font-src 'self' https:; connect-src 'self' https:;">
     <meta http-equiv="X-Content-Type-Options" content="nosniff">
     <meta http-equiv="X-Frame-Options" content="SAMEORIGIN">
     <meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin">
-    <!-- 添加跨域設置 -->
-    <meta http-equiv="Access-Control-Allow-Origin" content="*">
+    <meta http-equiv="Permissions-Policy" content="geolocation=(), microphone=(), camera=()">
     <!-- SEO 相關設置 -->
     <meta name="robots" content="index, follow">
     <link rel="canonical" href="https://shen.technology">
@@ -21,10 +20,9 @@
     <meta property="og:description" content="探索全新的虛擬世界">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://shen.technology">
-    <meta property="og:image" content="assets/Shen_Logo_Word.svg">
+    <meta property="og:image" content="./assets/Shen_Logo_Word.svg">
     <title>神 SHEN</title>
-    <!-- 使用相對路徑 -->
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="./styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700&display=swap" rel="stylesheet">
     <!-- 網站圖標將在添加相應文件後再設置 -->
@@ -49,7 +47,7 @@
       "@type": "Organization",
       "name": "神 SHEN",
       "url": "https://shen.technology",
-      "logo": "/assets/Shen_Logo_Word.svg",
+      "logo": "./assets/Shen_Logo_Word.svg",
       "description": "探索全新的虛擬世界",
       "sameAs": [
         "https://www.facebook.com/shen.technology",
@@ -64,7 +62,7 @@
       "@type": "Product",
       "name": "CyberMaid",
       "description": "為您打造專屬的虛擬伴侶，讓每個工作時光都充滿溫暖與樂趣。",
-      "image": "/assets/store_capsule_header.png",
+      "image": "./assets/store_capsule_header.png",
       "brand": {
         "@type": "Brand",
         "name": "神 SHEN"
@@ -82,8 +80,8 @@
     <!-- 導航欄 -->
     <nav class="nav-container">
         <div class="nav-content">
-            <a href="index.html" class="logo">
-                <img src="assets/Shen_Logo_Word.svg" alt="神 SHEN" class="logo-image">
+            <a href="./index.html" class="logo">
+                <img src="./assets/Shen_Logo_Word.svg" alt="神 SHEN" class="logo-image">
             </a>
             <ul class="nav-links">
                 <li><a href="#" class="cybermaid-link cybermaidTrigger">CyberMaid</a></li>
@@ -106,7 +104,7 @@
     <div class="product-nav">
         <div class="product-nav-content">
             <a href="#" class="product-nav-item cybermaidTrigger">
-                <img src="assets/MaidHeadband.svg" alt="CyberMaid" class="product-nav-icon">
+                <img src="./assets/MaidHeadband.svg" alt="CyberMaid" class="product-nav-icon">
                 <span class="product-nav-label">CyberMaid</span>
                 <span class="product-nav-new">全新</span>
             </a>
@@ -124,7 +122,7 @@
                 <div class="product-grid">
                     <a href="#" class="product-item cybermaidTrigger">
                         <div class="product-image-container">
-                            <img src="assets/store_capsule_header.png" alt="CyberMaid" class="product-image">
+                            <img src="./assets/store_capsule_header.png" alt="CyberMaid" class="product-image">
                         </div>
                         <h2>CyberMaid</h2>
                         <span class="product-tag">立即遊玩 ></span>
@@ -240,7 +238,7 @@
         </div>
     </footer>
 
-    <script src="translations.js"></script>
-    <script src="script.js"></script>
+    <script src="./translations.js"></script>
+    <script src="./script.js"></script>
 </body>
 </html> 
