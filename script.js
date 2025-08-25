@@ -192,13 +192,13 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
-    // 關閉產品詳情
-    if (closeBtn) {
+    // 關閉產品詳情 - 為所有關閉按鈕添加事件監聽器
+    document.querySelectorAll('.close-button').forEach(closeBtn => {
         closeBtn.addEventListener('click', function() {
             closeModal(productModal);
             closeModal(mistyOnsenModal);
         });
-    }
+    });
 
     // 點擊模態框背景關閉
     window.onclick = function(e) {
@@ -214,10 +214,4 @@ document.addEventListener('DOMContentLoaded', function() {
     };
 });
 
-// 產品詳情模態框相關邏輯
-document.querySelectorAll('.cybermaidTrigger').forEach(trigger => {
-    trigger.addEventListener('click', function(e) {
-        e.preventDefault();
-        showAgeCheckModal();
-    });
-}); 
+// 移除重複的事件監聽器，所有邏輯都在 DOMContentLoaded 中處理 
