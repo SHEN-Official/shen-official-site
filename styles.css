@@ -270,13 +270,13 @@ body {
 }
 
 .hero-subtitle {
-    font-size: 21px;
-    font-weight: 500;
-    margin-top: 4px;  /* 調整與標題的間距 */
+    font-size: 76px;  /* 跟之前 h1 標題一樣大 */
+    line-height: 1.1;  /* 調整行高 */
+    font-weight: 700;
+    letter-spacing: -.015em;
+    color: #000000;
     margin-bottom: 16px;  /* 添加下方間距 */
-    color: #1d1d1f;
-    max-width: 600px;  /* 限制寬度提升可讀性 */
-    line-height: 1.4;  /* 調整行高 */
+    max-width: 800px;  /* 限制寬度提升可讀性 */
 }
 
 .product-showcase {
@@ -289,10 +289,16 @@ body {
     max-width: 1200px;
     margin: 0 auto;
     padding: 2rem 8.33333%;
-    display: grid;
-    grid-template-columns: minmax(auto, 600px);
-    justify-content: start;
+    display: flex;
+    flex-direction: column;
     gap: 2rem;
+}
+
+/* 確保產品垂直排列，適合手機觀看 */
+.product-item {
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
 }
 
 .product-item {
@@ -304,7 +310,7 @@ body {
 
 .product-image-container {
     width: 100%;
-    max-width: 600px;
+    max-width: 800px;
     aspect-ratio: 16/9;
     margin-bottom: 1rem;
     transition: all 0.3s ease;
@@ -1043,6 +1049,8 @@ footer {
     min-width: 60px;
     transition: color 0.3s ease;
     padding: 0 5px;
+    min-height: 60px;
+    justify-content: flex-start;
 }
 
 .product-nav-item:hover {

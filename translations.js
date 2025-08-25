@@ -3,11 +3,11 @@ const translations = {
     'zh-TW': {
         // 導航欄
         'nav_cybermaid': 'CyberMaid',
+        'nav_misty_onsen': 'Misty Onsen',
         'nav_language': '繁體中文',
 
         // 主標題
-        'hero_title': 'CyberMaid',
-        'hero_subtitle': '讓你的桌面充滿溫暖與樂趣',
+        'hero_subtitle': '探索全新的虛擬世界',
 
         // 產品標籤
         'product_tag': '立即遊玩 >',
@@ -56,16 +56,47 @@ const translations = {
         'footer_contact': '聯絡資訊',
         'footer_email': '',
         'footer_follow': '追蹤我們',
-        'footer_rights': '保留一切權利'
+        'footer_rights': '保留一切權利',
+
+        // Misty Onsen 專用翻譯
+        'misty_onsen_modal_title': '深入日本山區的神秘溫泉，',
+        'misty_onsen_modal_subtitle': '遵循規則，生存下去——或者永遠留在山中。',
+        'misty_onsen_name': '《Misty Onsen》——心理恐怖生存遊戲',
+        'misty_onsen_slogan': '🌿 遵循規則，生存下去——或者永遠留在山中 🌿',
+        'misty_onsen_desc': '第一人稱心理恐怖遊戲，設定在偏遠的日本山區溫泉。作為新的管理員，通過遵循備忘錄來生存。',
+        'misty_onsen_rules_title': '📓 工作規則（必須遵循）：',
+        'misty_onsen_rules': [
+            '👕 穿著高度可見的服裝',
+            '🛤️ 絕不偏離指定路線',
+            '🔇 如果聽到有人呼喚，不要回頭或回應',
+            '🚫 如果看到女性，記住——這座山上不應該有任何女性',
+            '🏃 如果聞到任何奇怪氣味，立即撤離'
+        ],
+        'misty_onsen_features_title': '🎀 遊戲特色：',
+        'misty_onsen_features': [
+            '🌿 心理恐怖氛圍：恐懼來自孤立、環境和未知',
+            '📖 基於神秘網路傳言：紮根於現實工作環境和山林禁忌',
+            '⚡ 偶發突發事件：不以跳嚇為中心，但危險可能意外出現',
+            '🏃 無戰鬥——只有決策和逃脫：遵循規則生存是你的唯一目標'
+        ],
+        'misty_onsen_suitable': [
+            '✓ 喜愛心理恐怖和氛圍營造的玩家',
+            '✓ 追求沉浸式恐怖體驗的冒險遊戲愛好者',
+            '✓ 喜歡解謎和生存元素的玩家',
+            '✓ 對日本文化和神秘傳言感興趣的玩家',
+            '✓ 尋找獨特恐怖體驗的玩家'
+        ],
+        'misty_onsen_cta_title': '🌿 準備好面對山中的恐怖了嗎？🌿',
+        'misty_onsen_cta_desc': '立即體驗，讓 Misty Onsen 帶你進入一個充滿恐懼和神秘的世界！'
     },
     'en': {
         // Navigation
         'nav_cybermaid': 'CyberMaid',
+        'nav_misty_onsen': 'Misty Onsen',
         'nav_language': 'English',
 
         // Hero section
-        'hero_title': 'CyberMaid',
-        'hero_subtitle': 'Bringing Warmth and Joy to Your Desktop',
+        'hero_subtitle': 'Explore New Virtual Worlds',
 
         // Product tag
         'product_tag': 'Play Now >',
@@ -114,7 +145,38 @@ const translations = {
         'footer_contact': 'Contact',
         'footer_email': '',
         'footer_follow': 'Follow Us',
-        'footer_rights': 'All rights reserved'
+        'footer_rights': 'All rights reserved',
+
+        // Misty Onsen specific translations
+        'misty_onsen_modal_title': 'Deep in the Japanese mountains lies a mysterious onsen,',
+        'misty_onsen_modal_subtitle': 'Follow the rules to survive—or stay in the mountain forever.',
+        'misty_onsen_name': 'Misty Onsen - Psychological Horror Survival Game',
+        'misty_onsen_slogan': '🌿 Follow the rules to survive—or stay in the mountain forever 🌿',
+        'misty_onsen_desc': 'A first-person psychological horror game set at a remote hot-spring facility in the Japanese mountains. As the new caretaker, survive by following the memorandum.',
+        'misty_onsen_rules_title': '📓 Work Rules (Must Follow):',
+        'misty_onsen_rules': [
+            '👕 Wear highly visible clothing',
+            '🛤️ Never stray from the designated route',
+            '🔇 If you hear someone calling, do not look back or respond',
+            '🚫 If you see a woman, remember—there shouldn\'t be any on this mountain',
+            '🏃 If you detect any strange odor, evacuate immediately'
+        ],
+        'misty_onsen_features_title': '🎀 Game Features:',
+        'misty_onsen_features': [
+            '🌿 Psychological horror atmosphere: Fear arises from isolation, ambience, and the unknown',
+            '📖 Inspired by mysterious online rumors: Grounded in realistic work settings and mountain-forest taboos',
+            '⚡ Occasional sudden events: Not centered on jump scares, but danger can appear unexpectedly',
+            '🏃 No combat—only decisions and escape: Surviving by the rules is your only goal'
+        ],
+        'misty_onsen_suitable': [
+            '✓ Players who love psychological horror and atmospheric experiences',
+            '✓ Adventure game enthusiasts seeking immersive horror experiences',
+            '✓ Players who enjoy puzzle-solving and survival elements',
+            '✓ Players interested in Japanese culture and mysterious rumors',
+            '✓ Players looking for unique horror experiences'
+        ],
+        'misty_onsen_cta_title': '🌿 Ready to face the horror in the mountain? 🌿',
+        'misty_onsen_cta_desc': 'Experience now and let Misty Onsen take you into a world full of fear and mystery!'
     }
 };
 
@@ -150,35 +212,90 @@ function updatePageContent(lang) {
     document.querySelector('.lang-btn span').textContent = t.nav_language;
 
     // 更新主標題
-    document.querySelector('.hero-content h1').textContent = t.hero_title;
     document.querySelector('.hero-subtitle').textContent = t.hero_subtitle;
 
     // 更新產品標籤
     document.querySelector('.product-tag').textContent = t.product_tag;
 
-    // 更新產品詳情模態框
-    document.querySelector('.modal-header h2').textContent = t.product_modal_title;
-    document.querySelector('.modal-header p').textContent = t.product_modal_subtitle;
-    document.querySelector('.modal-body h3').textContent = t.product_name;
-    document.querySelector('.modal-body h4').textContent = t.product_slogan;
-    document.querySelector('.modal-body > p').textContent = t.product_desc;
+    // 更新 CyberMaid 產品詳情模態框
+    const cybermaidModal = document.getElementById('productModal');
+    if (cybermaidModal) {
+        cybermaidModal.querySelector('.modal-header h2').textContent = t.product_modal_title;
+        cybermaidModal.querySelector('.modal-header p').textContent = t.product_modal_subtitle;
+        cybermaidModal.querySelector('.modal-body h3').textContent = t.product_name;
+        
+        // 更新產品標語與段落標題（主要特色、適合玩家）
+        const modalH4s = cybermaidModal.querySelectorAll('.modal-body h4');
+        if (modalH4s && modalH4s.length > 0) {
+            // 第 1 個 h4：產品標語
+            modalH4s[0].textContent = t.product_slogan;
+            // 第 2 個 h4：主要特色
+            if (modalH4s.length > 1) {
+                modalH4s[1].textContent = t.features_title;
+            }
+            // 第 3 個 h4：適合玩家
+            if (modalH4s.length > 2) {
+                modalH4s[2].textContent = t.suitable_title;
+            }
+        }
+        cybermaidModal.querySelector('.modal-body > p').textContent = t.product_desc;
 
-    // 更新特色列表
-    const featuresList = document.querySelector('.modal-body ul');
-    if (featuresList) {
-        featuresList.innerHTML = t.features.map(feature => `<li>${feature}</li>`).join('');
+        // 更新特色列表
+        const featuresList = cybermaidModal.querySelector('.modal-body ul');
+        if (featuresList) {
+            featuresList.innerHTML = t.features.map(feature => `<li>${feature}</li>`).join('');
+        }
+
+        // 更新適合玩家列表
+        const suitableList = cybermaidModal.querySelector('.modal-body ul:nth-of-type(2)');
+        if (suitableList) {
+            suitableList.innerHTML = t.suitable_players.map(player => `<li>${player}</li>`).join('');
+        }
+
+        // 更新CTA區域
+        cybermaidModal.querySelector('.cta-section h4').textContent = t.cta_title;
+        cybermaidModal.querySelector('.cta-section p').textContent = t.cta_desc;
+        cybermaidModal.querySelector('.store-action').textContent = t.buy_steam;
     }
 
-    // 更新適合玩家列表
-    const suitableList = document.querySelector('.modal-body ul:nth-of-type(2)');
-    if (suitableList) {
-        suitableList.innerHTML = t.suitable_players.map(player => `<li>${player}</li>`).join('');
-    }
+    // 更新 Misty Onsen 模態框
+    const mistyOnsenModal = document.getElementById('mistyOnsenModal');
+    if (mistyOnsenModal) {
+        mistyOnsenModal.querySelector('.modal-header h2').textContent = t.misty_onsen_modal_title;
+        mistyOnsenModal.querySelector('.modal-header p').textContent = t.misty_onsen_modal_subtitle;
+        mistyOnsenModal.querySelector('.modal-body h3').textContent = t.misty_onsen_name;
+        mistyOnsenModal.querySelector('.modal-body h4').textContent = t.misty_onsen_slogan;
+        mistyOnsenModal.querySelector('.modal-body > p').textContent = t.misty_onsen_desc;
 
-    // 更新CTA區域
-    document.querySelector('.cta-section h4').textContent = t.cta_title;
-    document.querySelector('.cta-section p').textContent = t.cta_desc;
-    document.querySelector('.store-action').textContent = t.buy_steam;
+        // 更新工作規則標題和列表
+        const mistyH4s = mistyOnsenModal.querySelectorAll('.modal-body h4');
+        if (mistyH4s && mistyH4s.length > 1) {
+            mistyH4s[1].textContent = t.misty_onsen_rules_title;
+        }
+        const mistyRulesList = mistyOnsenModal.querySelector('.modal-body ul');
+        if (mistyRulesList) {
+            mistyRulesList.innerHTML = t.misty_onsen_rules.map(rule => `<li>${rule}</li>`).join('');
+        }
+
+        // 更新遊戲特色標題和列表
+        if (mistyH4s && mistyH4s.length > 2) {
+            mistyH4s[2].textContent = t.misty_onsen_features_title;
+        }
+        const mistyFeaturesList = mistyOnsenModal.querySelector('.modal-body ul:nth-of-type(2)');
+        if (mistyFeaturesList) {
+            mistyFeaturesList.innerHTML = t.misty_onsen_features.map(feature => `<li>${feature}</li>`).join('');
+        }
+
+        // 更新適合玩家列表
+        const mistySuitableList = mistyOnsenModal.querySelector('.modal-body ul:nth-of-type(3)');
+        if (mistySuitableList) {
+            mistySuitableList.innerHTML = t.misty_onsen_suitable.map(player => `<li>${player}</li>`).join('');
+        }
+
+        // 更新CTA區域
+        mistyOnsenModal.querySelector('.cta-section h4').textContent = t.misty_onsen_cta_title;
+        mistyOnsenModal.querySelector('.cta-section p').textContent = t.misty_onsen_cta_desc;
+    }
 
     // 更新年齡確認模態框
     document.querySelector('#ageCheckModal h2').textContent = t.age_verify_title;
