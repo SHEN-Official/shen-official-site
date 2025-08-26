@@ -1,0 +1,6 @@
+.product-link {
+  display: inline-block;
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+} 
