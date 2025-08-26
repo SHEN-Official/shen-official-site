@@ -270,7 +270,7 @@ body {
 }
 
 .hero-subtitle {
-    font-size: 76px;  /* 跟之前 h1 標題一樣大 */
+    font-size: 68px;  /* 縮小到原來的 90% (76px * 0.9 = 68.4px) */
     line-height: 1.1;  /* 調整行高 */
     font-weight: 700;
     letter-spacing: -.015em;
@@ -379,7 +379,7 @@ body {
     }
     
     .hero-subtitle {
-        font-size: 24px;
+        font-size: 32px;
         margin-top: 4px;
         margin-bottom: 12px;
     }
