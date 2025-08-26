@@ -253,7 +253,7 @@ body {
 
 .hero-content {
     text-align: left;
-    padding: 5rem 8.33333% 2rem;  /* 增加上方間距 */
+    padding: 1.5rem 8.33333% 1rem;  /* 更緊湊的間距 */
     max-width: 1200px;
     margin: 0 auto;
     width: 100%;
@@ -369,7 +369,7 @@ body {
     }
     
     .hero-content {
-        padding-top: 4rem;  /* 手機版上方間距 */
+        padding-top: 1rem;  /* 更緊湊的間距 */
     }
     
     .hero-content h1 {
@@ -380,8 +380,8 @@ body {
     
     .hero-subtitle {
         font-size: 32px;
-        margin-top: 4px;
-        margin-bottom: 12px;
+        margin-top: 20px;
+        margin-bottom: 30px;
     }
     
     .product-grid {
