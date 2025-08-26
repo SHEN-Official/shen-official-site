@@ -9,7 +9,7 @@ function App() {
       <div className="product-grid">
         <ProductLink to="/product/1">
           <div className="product-card">
-            <img src="store_capsule_header.png" alt="產品1" />
+            <img src="CyberMaid_store_capsule_header.png" alt="產品1" />
             <h3>產品名稱</h3>
           </div>
         </ProductLink>

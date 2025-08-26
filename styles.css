@@ -379,7 +379,7 @@ body {
     }
     
     .hero-subtitle {
-        font-size: 17px;
+        font-size: 24px;
         margin-top: 4px;
         margin-bottom: 12px;
     }
@@ -1062,6 +1062,206 @@ footer {
     height: 24px;
     margin-bottom: 8px;
     object-fit: contain;
+    /* 確保圖標在容器中居中且大小一致 */
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* 移除自動深色模式，只支援反黑插件 */
+
+/* 通用深色模式支援 - 使用更廣泛的選擇器 */
+[class*="dark"] body,
+[class*="theme-dark"] body,
+[class*="night"] body,
+[class*="inverted"] body,
+[data-theme*="dark"] body,
+[data-theme*="night"] body,
+[data-theme*="inverted"] body {
+    background-color: #1a1a1a !important;
+    color: #ffffff !important;
+}
+
+[class*="dark"] .nav-container,
+[class*="theme-dark"] .nav-container,
+[class*="night"] .nav-container,
+[class*="inverted"] .nav-container,
+[data-theme*="dark"] .nav-container,
+[data-theme*="night"] .nav-container,
+[data-theme*="inverted"] .nav-container {
+    background-color: rgba(26, 26, 26, 0.8) !important;
+}
+
+[class*="dark"] .product-nav,
+[class*="theme-dark"] .product-nav,
+[class*="night"] .product-nav,
+[class*="inverted"] .product-nav,
+[data-theme*="dark"] .product-nav,
+[data-theme*="night"] .product-nav,
+[data-theme*="inverted"] .product-nav {
+    background-color: rgba(26, 26, 26, 0.8) !important;
+    border-bottom-color: #333333 !important;
+}
+
+[class*="dark"] .product-nav-icon,
+[class*="theme-dark"] .product-nav-icon,
+[class*="night"] .product-nav-icon,
+[class*="inverted"] .product-nav-icon,
+[data-theme*="dark"] .product-nav-icon,
+[data-theme*="night"] .product-nav-icon,
+[data-theme*="inverted"] .product-nav-icon {
+    filter: invert(1) brightness(1.2) !important;
+}
+
+[class*="dark"] .logo-image,
+[class*="theme-dark"] .logo-image,
+[class*="night"] .logo-image,
+[class*="inverted"] .logo-image,
+[data-theme*="dark"] .logo-image,
+[data-theme*="night"] .logo-image,
+[data-theme*="inverted"] .logo-image {
+    filter: invert(1) !important;
+}
+
+/* 支援反黑插件 - 當 body 有 dark 類別時 */
+body.dark,
+body[data-theme="dark"],
+.dark,
+body[class*="dark"],
+body[class*="theme-dark"],
+body[class*="night"],
+body[class*="inverted"],
+html.dark,
+html[data-theme="dark"],
+html[class*="dark"],
+html[class*="theme-dark"],
+html[class*="night"],
+html[class*="inverted"] {
+    background-color: #1a1a1a !important;
+    color: #ffffff !important;
+}
+
+body.dark .nav-container,
+body[data-theme="dark"] .nav-container,
+.dark .nav-container,
+body[class*="dark"] .nav-container,
+body[class*="theme-dark"] .nav-container,
+body[class*="night"] .nav-container,
+body[class*="inverted"] .nav-container,
+html.dark .nav-container,
+html[data-theme="dark"] .nav-container,
+html[class*="dark"] .nav-container,
+html[class*="theme-dark"] .nav-container,
+html[class*="night"] .nav-container,
+html[class*="inverted"] .nav-container {
+    background-color: rgba(26, 26, 26, 0.8) !important;
+}
+
+body.dark .product-nav,
+body[data-theme="dark"] .product-nav,
+.dark .product-nav {
+    background-color: rgba(26, 26, 26, 0.8) !important;
+    border-bottom-color: #333333 !important;
+}
+
+body.dark .nav-links a,
+body[data-theme="dark"] .nav-links a,
+.dark .nav-links a {
+    color: rgba(255, 255, 255, 0.8) !important;
+}
+
+body.dark .nav-links a:hover,
+body[data-theme="dark"] .nav-links a:hover,
+.dark .nav-links a:hover {
+    color: #ffffff !important;
+}
+
+body.dark .product-nav-item,
+body[data-theme="dark"] .product-nav-item,
+.dark .product-nav-item {
+    color: #ffffff !important;
+}
+
+body.dark .product-nav-item:hover,
+body[data-theme="dark"] .product-nav-item:hover,
+.dark .product-nav-item:hover {
+    color: #0a84ff !important;
+}
+
+body.dark .product-nav-label,
+body[data-theme="dark"] .product-nav-label,
+.dark .product-nav-label {
+    color: #ffffff !important;
+}
+
+body.dark .hero-subtitle,
+body[data-theme="dark"] .hero-subtitle,
+.dark .hero-subtitle {
+    color: #ffffff !important;
+}
+
+body.dark .product-item h2,
+body[data-theme="dark"] .product-item h2,
+.dark .product-item h2 {
+    color: #ffffff !important;
+}
+
+body.dark .product-tag,
+body[data-theme="dark"] .product-tag,
+.dark .product-tag {
+    color: #0a84ff !important;
+}
+
+body.dark .lang-btn,
+body[data-theme="dark"] .lang-btn,
+.dark .lang-btn {
+    color: #ffffff !important;
+}
+
+body.dark .language-dropdown a,
+body[data-theme="dark"] .language-dropdown a,
+.dark .language-dropdown a {
+    color: #ffffff !important;
+    background-color: #333333 !important;
+}
+
+body.dark .language-dropdown a:hover,
+body[data-theme="dark"] .language-dropdown a:hover,
+.dark .language-dropdown a:hover {
+    background-color: #444444 !important;
+}
+
+/* 圖標在深色模式下反轉 */
+body.dark .product-nav-icon,
+body[data-theme="dark"] .product-nav-icon,
+.dark .product-nav-icon,
+body[class*="dark"] .product-nav-icon,
+body[class*="theme-dark"] .product-nav-icon,
+body[class*="night"] .product-nav-icon,
+body[class*="inverted"] .product-nav-icon,
+html.dark .product-nav-icon,
+html[data-theme="dark"] .product-nav-icon,
+html[class*="dark"] .product-nav-icon,
+html[class*="theme-dark"] .product-nav-icon,
+html[class*="night"] .product-nav-icon,
+html[class*="inverted"] .product-nav-icon {
+    filter: invert(1) brightness(1.2) !important;
+}
+
+body.dark .logo-image,
+body[data-theme="dark"] .logo-image,
+.dark .logo-image,
+body[class*="dark"] .logo-image,
+body[class*="theme-dark"] .logo-image,
+body[class*="night"] .logo-image,
+body[class*="inverted"] .logo-image,
+html.dark .logo-image,
+html[data-theme="dark"] .logo-image,
+html[class*="dark"] .logo-image,
+html[class*="theme-dark"] .logo-image,
+html[class*="night"] .logo-image,
+html[class*="inverted"] .logo-image {
+    filter: invert(1) !important;
 }
 
 .product-nav-label {
