@@ -307,7 +307,7 @@ function updatePageContent(lang) {
     document.querySelector('.footer-section:nth-child(1) h4').textContent = t.footer_contact;
     const emailElement = document.querySelector('.footer-section:nth-child(1) p');
     if (emailElement) {
-        emailElement.textContent = 'contact@shen.technology';
+        emailElement.textContent = 'shen@shen.technology';
     }
     document.querySelector('.footer-section:nth-child(2) h4').textContent = t.footer_follow;
     document.querySelector('.footer-bottom p').innerHTML = 
