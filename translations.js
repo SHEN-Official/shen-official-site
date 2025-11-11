@@ -11,6 +11,7 @@ const translations = {
 
         // 產品標籤
         'product_tag': '立即遊玩 >',
+        'product_nav_new': '全新',
 
         // 產品詳情
         'product_modal_title': '為您打造專屬的虛擬伴侶，',
@@ -79,6 +80,7 @@ const translations = {
             '⚡ 偶發突發事件：不以跳嚇為中心，但危險可能意外出現',
             '🏃 無戰鬥——只有決策和逃脫：遵循規則生存是你的唯一目標'
         ],
+        'misty_onsen_suitable_title': '🔥 適合這些玩家：',
         'misty_onsen_suitable': [
             '✓ 喜愛心理恐怖和氛圍營造的玩家',
             '✓ 追求沉浸式恐怖體驗的冒險遊戲愛好者',
@@ -87,7 +89,8 @@ const translations = {
             '✓ 尋找獨特恐怖體驗的玩家'
         ],
         'misty_onsen_cta_title': '🌿 準備好面對山中的恐怖了嗎？🌿',
-        'misty_onsen_cta_desc': '立即體驗，讓 Misty Onsen 帶你進入一個充滿恐懼和神秘的世界！'
+        'misty_onsen_cta_desc': '立即體驗，讓 Misty Onsen 帶你進入一個充滿恐懼和神秘的世界！',
+        'misty_onsen_media_html': '媒體報導：<a href="https://gamesardor.net/top-steam-games-november-2025/" target="_blank" rel="noopener noreferrer">Games Ardor - 2025 年 11 月 Steam 精選遊戲</a>'
     },
     'en': {
         // Navigation
@@ -100,6 +103,7 @@ const translations = {
 
         // Product tag
         'product_tag': 'Play Now >',
+        'product_nav_new': 'New',
 
         // Product Modal
         'product_modal_title': 'Create Your Personal Interactive Experience',
@@ -168,6 +172,7 @@ const translations = {
             '⚡ Occasional sudden events: Not centered on jump scares, but danger can appear unexpectedly',
             '🏃 No combat—only decisions and escape: Surviving by the rules is your only goal'
         ],
+        'misty_onsen_suitable_title': '🔥 Suitable for these players:',
         'misty_onsen_suitable': [
             '✓ Players who love psychological horror and atmospheric experiences',
             '✓ Adventure game enthusiasts seeking immersive horror experiences',
@@ -176,7 +181,8 @@ const translations = {
             '✓ Players looking for unique horror experiences'
         ],
         'misty_onsen_cta_title': '🌿 Ready to face the horror in the mountain? 🌿',
-        'misty_onsen_cta_desc': 'Experience now and let Misty Onsen take you into a world full of fear and mystery!'
+        'misty_onsen_cta_desc': 'Experience now and let Misty Onsen take you into a world full of fear and mystery!',
+        'misty_onsen_media_html': 'Media mention: <a href="https://gamesardor.net/top-steam-games-november-2025/" target="_blank" rel="noopener noreferrer">Games Ardor – Top Steam Games (November 2025)</a>'
     }
 };
 
@@ -215,7 +221,13 @@ function updatePageContent(lang) {
     document.querySelector('.hero-subtitle').textContent = t.hero_subtitle;
 
     // 更新產品標籤
-    document.querySelector('.product-tag').textContent = t.product_tag;
+    document.querySelectorAll('.product-tag').forEach(tag => {
+        tag.textContent = t.product_tag;
+    });
+    const productNavNew = document.querySelector('.product-nav-new');
+    if (productNavNew) {
+        productNavNew.textContent = t.product_nav_new;
+    }
 
     // 更新 CyberMaid 產品詳情模態框
     const cybermaidModal = document.getElementById('productModal');
@@ -281,6 +293,9 @@ function updatePageContent(lang) {
         if (mistyH4s && mistyH4s.length > 2) {
             mistyH4s[2].textContent = t.misty_onsen_features_title;
         }
+        if (mistyH4s && mistyH4s.length > 3) {
+            mistyH4s[3].textContent = t.misty_onsen_suitable_title;
+        }
         const mistyFeaturesList = mistyOnsenModal.querySelector('.modal-body ul:nth-of-type(2)');
         if (mistyFeaturesList) {
             mistyFeaturesList.innerHTML = t.misty_onsen_features.map(feature => `<li>${feature}</li>`).join('');
@@ -295,6 +310,13 @@ function updatePageContent(lang) {
         // 更新CTA區域
         mistyOnsenModal.querySelector('.cta-section h4').textContent = t.misty_onsen_cta_title;
         mistyOnsenModal.querySelector('.cta-section p').textContent = t.misty_onsen_cta_desc;
+        const mistyMediaMention = mistyOnsenModal.querySelector('.cta-section .media-mention');
+        if (mistyMediaMention) {
+            mistyMediaMention.innerHTML = t.misty_onsen_media_html;
+        }
+        mistyOnsenModal.querySelectorAll('.store-action').forEach(action => {
+            action.textContent = t.buy_steam;
+        });
     }
 
     // 更新年齡確認模態框

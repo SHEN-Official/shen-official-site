@@ -699,6 +699,23 @@ footer {
     border-top: 1px solid #d2d2d7;
 }
 
+.cta-section p {
+    margin-bottom: 1.5rem;
+}
+
+.media-mention {
+    margin-top: -1rem;
+    margin-bottom: 1.5rem;
+    font-size: 0.875rem;
+    color: #6e6e73;
+}
+
+.media-mention a {
+    color: inherit;
+    text-decoration: underline;
+    text-decoration-style: dotted;
+}
+
 .store-buttons {
     display: flex;
     justify-content: center;
