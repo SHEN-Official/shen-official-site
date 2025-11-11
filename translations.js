@@ -182,7 +182,7 @@ const translations = {
         ],
         'misty_onsen_cta_title': '🌿 Ready to face the horror in the mountain? 🌿',
         'misty_onsen_cta_desc': 'Experience now and let Misty Onsen take you into a world full of fear and mystery!',
-        'misty_onsen_media_html': 'Media mention: <a href="https://gamesardor.net/top-steam-games-november-2025/" target="_blank" rel="noopener noreferrer">Games Ardor – Top Steam Games (November 2025)</a>'
+        'misty_onsen_media_html': 'Media coverage: <a href="https://gamesardor.net/top-steam-games-november-2025/" target="_blank" rel="noopener noreferrer">Games Ardor – Top Steam Games to Look Out for in November 2025</a>'
     }
 };
 
