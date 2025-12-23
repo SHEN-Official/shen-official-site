@@ -113,6 +113,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const ageModal = document.getElementById('ageCheckModal');
     const productModal = document.getElementById('productModal');
     const mistyOnsenModal = document.getElementById('mistyOnsenModal');
+    const foamCuttingSimulatorModal = document.getElementById('foamCuttingSimulatorModal');
     const confirmBtn = document.querySelector('.age-confirm-btn');
     const denyBtn = document.querySelector('.age-deny-btn');
     const closeBtn = document.querySelector('.close-button');
@@ -126,6 +127,9 @@ document.addEventListener('DOMContentLoaded', function() {
     }
     if (mistyOnsenModal) {
         mistyOnsenModal.style.display = 'none';
+    }
+    if (foamCuttingSimulatorModal) {
+        foamCuttingSimulatorModal.style.display = 'none';
     }
     
     // 檢查年齡確認狀態
@@ -170,6 +174,14 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
+    // 找到所有帶有 foamCuttingSimulatorTrigger class 的元素並添加點擊事件
+    document.querySelectorAll('.foamCuttingSimulatorTrigger').forEach(trigger => {
+        trigger.addEventListener('click', function(e) {
+            e.preventDefault();
+            openModal(foamCuttingSimulatorModal);
+        });
+    });
+
     // 確認年齡
     if (confirmBtn) {
         confirmBtn.addEventListener('click', function() {
@@ -197,6 +209,7 @@ document.addEventListener('DOMContentLoaded', function() {
         closeBtn.addEventListener('click', function() {
             closeModal(productModal);
             closeModal(mistyOnsenModal);
+            closeModal(foamCuttingSimulatorModal);
         });
     });
 
@@ -207,6 +220,9 @@ document.addEventListener('DOMContentLoaded', function() {
         }
         if (e.target === mistyOnsenModal) {
             closeModal(mistyOnsenModal);
+        }
+        if (e.target === foamCuttingSimulatorModal) {
+            closeModal(foamCuttingSimulatorModal);
         }
         if (e.target === ageModal) {
             closeModal(ageModal);

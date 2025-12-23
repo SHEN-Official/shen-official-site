@@ -72,11 +72,33 @@ body {
     height: 100%;
     display: flex;
     align-items: center;
+    gap: 6px;
 }
 
 .nav-links a:hover {
     color: #000000;
 }
+
+.nav-icon {
+    width: 16px;
+    height: 16px;
+    object-fit: contain;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+/* 確保 CyberMaid SVG 圖標可見 - 使用與產品導航列相同的顯示方式 */
+.cybermaid-link .nav-icon {
+    width: 16px;
+    height: 16px;
+    object-fit: contain;
+    display: inline-block;
+    vertical-align: middle;
+    /* 反轉顏色讓白色圖標變成深色可見 */
+    filter: invert(1) brightness(0.2);
+}
+
+/* Misty Onsen 圖標已更新，不需要額外的背景和邊框 */
 
 .language-switcher {
     margin-left: 35px;
@@ -1084,6 +1106,8 @@ footer {
     margin-left: auto;
     margin-right: auto;
 }
+
+/* Misty Onsen 圖標已更新，不需要額外的背景和邊框 */
 
 /* 移除自動深色模式，只支援反黑插件 */
 

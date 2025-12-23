@@ -4,10 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- 安全相關設置 -->
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self' https:; script-src 'self' 'unsafe-inline' https:; style-src 'self' 'unsafe-inline' https:; img-src 'self' data: https:; font-src 'self' https:; connect-src 'self' https:;">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self' https:; script-src 'self' 'unsafe-inline' https:; style-src 'self' 'unsafe-inline' https:; img-src 'self' data: https:; font-src 'self' https:; connect-src 'self' https:; frame-src 'self' https://www.youtube.com https://youtube.com;">
     <meta http-equiv="X-Content-Type-Options" content="nosniff">
-    <meta http-equiv="X-Frame-Options" content="SAMEORIGIN">
-    <meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin">
+    <!-- X-Frame-Options 設為 SAMEORIGIN 可能會阻止 YouTube 嵌入，暫時註解掉 -->
+    <!-- <meta http-equiv="X-Frame-Options" content="SAMEORIGIN"> -->
+    <meta http-equiv="Referrer-Policy" content="no-referrer-when-downgrade">
+    <meta name="referrer" content="no-referrer-when-downgrade">
     <meta http-equiv="Permissions-Policy" content="geolocation=(), microphone=(), camera=()">
     <!-- SEO 相關設置 -->
     <meta name="robots" content="index, follow">
@@ -86,6 +88,8 @@
             </a>
             <ul class="nav-links">
                 <li><a href="#" class="cybermaid-link cybermaidTrigger">CyberMaid</a></li>
+                <li><a href="#" class="misty-onsen-link mistyOnsenTrigger">Misty Onsen</a></li>
+                <li><a href="#" class="foam-cutting-link foamCuttingSimulatorTrigger">Foam Cutting Simulator</a></li>
             </ul>
             <!-- 將語言切換按鈕移到導航欄外側，確保始終可見 -->
             <div class="language-switcher">
@@ -104,14 +108,18 @@
     <!-- 產品導航列 -->
     <div class="product-nav">
         <div class="product-nav-content">
+            <a href="#" class="product-nav-item foamCuttingSimulatorTrigger">
+                <img src="./assets/icon_FoamCuttingSimulator.ico" alt="Foam Cutting Simulator" class="product-nav-icon">
+                <span class="product-nav-label">Foam Cutting Simulator</span>
+                <span class="product-nav-new">全新</span>
+            </a>
+            <a href="#" class="product-nav-item mistyOnsenTrigger">
+                <img src="./assets/Icon_MistyOnsen.ico" alt="Misty Onsen" class="product-nav-icon">
+                <span class="product-nav-label">Misty Onsen</span>
+            </a>
             <a href="#" class="product-nav-item cybermaidTrigger">
                 <img src="./assets/MaidHeadband.svg" alt="CyberMaid" class="product-nav-icon">
                 <span class="product-nav-label">CyberMaid</span>
-            </a>
-            <a href="#" class="product-nav-item mistyOnsenTrigger">
-                <img src="./assets/Icon_MistyOnsen.png" alt="Misty Onsen" class="product-nav-icon">
-                <span class="product-nav-label">Misty Onsen</span>
-                <span class="product-nav-new">全新</span>
             </a>
         </div>
     </div>
@@ -124,6 +132,13 @@
             </div>
             <div class="product-showcase">
                 <div class="product-grid">
+                    <a href="#" class="product-item foamCuttingSimulatorTrigger">
+                        <div class="product-image-container">
+                            <img src="./assets/FoamCuttingSimulator_store_capsule_header.png" alt="Foam Cutting Simulator" class="product-image">
+                        </div>
+                        <h2>Foam Cutting Simulator</h2>
+                        <span class="product-tag">立即遊玩 ></span>
+                    </a>
                     <a href="#" class="product-item mistyOnsenTrigger">
                         <div class="product-image-container">
                             <img src="./assets/Misty_Onsen_store_capsule_header.png" alt="Misty Onsen" class="product-image">
@@ -270,6 +285,68 @@
                     <p class="media-mention">媒體報導：<a href="https://gamesardor.net/top-steam-games-november-2025/" target="_blank" rel="noopener noreferrer">Games Ardor - 2025 年 11 月 Steam 精選遊戲</a></p>
                     <div class="store-buttons">
                         <a href="https://store.steampowered.com/app/3798310/_Misty_Onsen/" class="store-button steam-button" target="_blank" rel="noopener noreferrer">
+                            <i class="fab fa-steam"></i>
+                            <div class="store-button-text">
+                                <span class="store-name">Steam</span>
+                                <span class="store-action">立即購買</span>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Foam Cutting Simulator 產品詳情模態框 -->
+    <div id="foamCuttingSimulatorModal" class="modal product-modal">
+        <div class="modal-content product-content">
+            <button class="close-button">&times;</button>
+            <div class="modal-header">
+                <h2>觀看物體被整齊切割，</h2>
+                <p>就像按下大腦的重置按鈕，瞬間融化壓力。</p>
+            </div>
+            <div class="modal-body">
+                <h3>《Foam Cutting Simulator》——純粹的切割療癒體驗</h3>
+                <h4>🧊 是的，這是一款完全關於觀看物體被切割的遊戲 🧊</h4>
+                <p>沒有怪物，沒有任務——只有重力、加熱的電線，以及那種你無法否認的奇妙滿足感。</p>
+
+                <h4>🪚 關於遊戲：</h4>
+                <p>在 <strong>Foam Cutting Simulator</strong> 中，你將體驗熱線切割的精緻藝術。物體從上方落下，穿過發光的金屬線，整齊地分成兩半——或數個碎片。泡沫、塑膠、玩具、金屬零件、電子產品——一切都能被切割，沒有任何東西能逃過燃燒的網格。你只需要...觀看它切過。聆聽，享受那瞬間的「嘶——」聲。</p>
+                
+                <div class="video-container">
+                    <iframe 
+                        width="100%" 
+                        height="315" 
+                        src="https://www.youtube.com/embed/O0qL0AZZG60" 
+                        title="Foam Cutting Simulator 介紹影片" 
+                        frameborder="0" 
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                        allowfullscreen>
+                    </iframe>
+                </div>
+
+                <h4>🔥 遊戲特色：</h4>
+                <ul>
+                    <li>🔧 真實切割模擬：每次穿過電線的感覺就像在練習焊接課程</li>
+                    <li>⚡ 真實即時物理切割：遊戲使用完全動態系統，<strong>沒有預製碎片</strong>。每個物體根據其<strong>位置、角度、方向和速度</strong>在撞擊電線的瞬間被切割。側向落下、垂直落下、以角度碰撞——每種結果都會產生完全不同的切割和獨特的碎片</li>
+                    <li>🎯 自由切割方式：玩家可以自由選擇如何切割：角度、方法、精細或寬鬆，甚至可以挑戰自己將物體切成最多碎片——你的方法塑造結果</li>
+                    <li>🎨 切割一切：輕物體、重物體、奇怪的物體、你從未預期會落下的東西——全部都能被切開</li>
+                    <li>💆 療癒節奏：嘶嘶聲、柔和的碰撞聲、那短暫的靜默——完美舒緩</li>
+                    <li>✨ 詳細物理反應：物體掉落太快時，碎片甚至可能跳個小舞</li>
+                    <li>😌 純粹觀看樂趣：無盡、無法抗拒的「嗯...真舒服」</li>
+                </ul>
+
+                <h4>🌟 為什麼要玩？</h4>
+                <p>因為你值得。因為你想放鬆。因為觀看物體被切割很滿足。因為生活很複雜，但這個切割網格總是穩定、筆直、可靠。觀看物體整齊地分開，比任何冥想都更平靜。</p>
+
+                <h4>💬 一句話總結</h4>
+                <p><strong>Foam Cutting Simulator</strong> ——當一切都被切開時，你的心靈變得平靜。</p>
+
+                <div class="cta-section">
+                    <h4>🧊 準備好體驗療癒的切割了嗎？🧊</h4>
+                    <p>立即體驗，讓 Foam Cutting Simulator 帶你進入純粹的切割療癒世界！</p>
+                    <div class="store-buttons">
+                        <a href="https://store.steampowered.com/app/4164460/FOAM_CUTTING_SIMULATOR/" class="store-button steam-button" target="_blank" rel="noopener noreferrer">
                             <i class="fab fa-steam"></i>
                             <div class="store-button-text">
                                 <span class="store-name">Steam</span>

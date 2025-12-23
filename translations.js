@@ -90,7 +90,32 @@ const translations = {
         ],
         'misty_onsen_cta_title': '🌿 準備好面對山中的恐怖了嗎？🌿',
         'misty_onsen_cta_desc': '立即體驗，讓 Misty Onsen 帶你進入一個充滿恐懼和神秘的世界！',
-        'misty_onsen_media_html': '媒體報導：<a href="https://gamesardor.net/top-steam-games-november-2025/" target="_blank" rel="noopener noreferrer">Games Ardor - 2025 年 11 月 Steam 精選遊戲</a>'
+        'misty_onsen_media_html': '媒體報導：<a href="https://gamesardor.net/top-steam-games-november-2025/" target="_blank" rel="noopener noreferrer">Games Ardor - 2025 年 11 月 Steam 精選遊戲</a>',
+
+        // Foam Cutting Simulator specific translations
+        'foam_cutting_simulator_modal_title': '觀看物體被整齊切割，',
+        'foam_cutting_simulator_modal_subtitle': '就像按下大腦的重置按鈕，瞬間融化壓力。',
+        'foam_cutting_simulator_name': '《Foam Cutting Simulator》——純粹的切割療癒體驗',
+        'foam_cutting_simulator_slogan': '🧊 是的，這是一款完全關於觀看物體被切割的遊戲 🧊',
+        'foam_cutting_simulator_desc': '沒有怪物，沒有任務——只有重力、加熱的電線，以及那種你無法否認的奇妙滿足感。',
+        'foam_cutting_simulator_about_title': '🪚 關於遊戲：',
+        'foam_cutting_simulator_about': '在 <strong>Foam Cutting Simulator</strong> 中，你將體驗熱線切割的精緻藝術。物體從上方落下，穿過發光的金屬線，整齊地分成兩半——或數個碎片。泡沫、塑膠、玩具、金屬零件、電子產品——一切都能被切割，沒有任何東西能逃過燃燒的網格。你只需要...觀看它切過。聆聽，享受那瞬間的「嘶——」聲。',
+        'foam_cutting_simulator_features_title': '🔥 遊戲特色：',
+        'foam_cutting_simulator_features': [
+            '🔧 真實切割模擬：每次穿過電線的感覺就像在練習焊接課程',
+            '⚡ 真實即時物理切割：遊戲使用完全動態系統，<strong>沒有預製碎片</strong>。每個物體根據其<strong>位置、角度、方向和速度</strong>在撞擊電線的瞬間被切割',
+            '🎯 自由切割方式：玩家可以自由選擇如何切割：角度、方法、精細或寬鬆，甚至可以挑戰自己將物體切成最多碎片',
+            '🎨 切割一切：輕物體、重物體、奇怪的物體、你從未預期會落下的東西——全部都能被切開',
+            '💆 療癒節奏：嘶嘶聲、柔和的碰撞聲、那短暫的靜默——完美舒緩',
+            '✨ 詳細物理反應：物體掉落太快時，碎片甚至可能跳個小舞',
+            '😌 純粹觀看樂趣：無盡、無法抗拒的「嗯...真舒服」'
+        ],
+        'foam_cutting_simulator_why_title': '🌟 為什麼要玩？',
+        'foam_cutting_simulator_why': '因為你值得。因為你想放鬆。因為觀看物體被切割很滿足。因為生活很複雜，但這個切割網格總是穩定、筆直、可靠。觀看物體整齊地分開，比任何冥想都更平靜。',
+        'foam_cutting_simulator_summary_title': '💬 一句話總結',
+        'foam_cutting_simulator_summary': '<strong>Foam Cutting Simulator</strong> ——當一切都被切開時，你的心靈變得平靜。',
+        'foam_cutting_simulator_cta_title': '🧊 準備好體驗療癒的切割了嗎？🧊',
+        'foam_cutting_simulator_cta_desc': '立即體驗，讓 Foam Cutting Simulator 帶你進入純粹的切割療癒世界！'
     },
     'en': {
         // Navigation
@@ -182,7 +207,32 @@ const translations = {
         ],
         'misty_onsen_cta_title': '🌿 Ready to face the horror in the mountain? 🌿',
         'misty_onsen_cta_desc': 'Experience now and let Misty Onsen take you into a world full of fear and mystery!',
-        'misty_onsen_media_html': 'Media coverage: <a href="https://gamesardor.net/top-steam-games-november-2025/" target="_blank" rel="noopener noreferrer">Games Ardor – Top Steam Games to Look Out for in November 2025</a>'
+        'misty_onsen_media_html': 'Media coverage: <a href="https://gamesardor.net/top-steam-games-november-2025/" target="_blank" rel="noopener noreferrer">Games Ardor – Top Steam Games to Look Out for in November 2025</a>',
+
+        // Foam Cutting Simulator specific translations
+        'foam_cutting_simulator_modal_title': 'Watching things get sliced cleanly',
+        'foam_cutting_simulator_modal_subtitle': 'feels like hitting your brain\'s reset button and melting stress in a second.',
+        'foam_cutting_simulator_name': 'Foam Cutting Simulator - Pure Cutting Therapy Experience',
+        'foam_cutting_simulator_slogan': '🧊 Yes, this is a game entirely about watching things get sliced 🧊',
+        'foam_cutting_simulator_desc': 'No monsters, no quests—just gravity, a heated wire, and that oddly satisfying feeling you can\'t deny.',
+        'foam_cutting_simulator_about_title': '🪚 About This Game:',
+        'foam_cutting_simulator_about': 'In <strong>Foam Cutting Simulator</strong>, you\'ll experience the refined art of hot-wire cutting. Objects fall from above, pass through the glowing metal wire, and split cleanly into halves—or several pieces. Foam, plastic, toys, metal parts, electronics—everything gets cut, nothing escapes the burning grid. All you have to do is… watch it slice through. Listen, and enjoy that momentary "shhhhk—".',
+        'foam_cutting_simulator_features_title': '🔥 Features:',
+        'foam_cutting_simulator_features': [
+            '🔧 Authentic Cutting Simulation: Every pass through the wire feels like you\'re practicing for a welding class',
+            '⚡ True Real-Time Physics Cutting: The game uses a fully dynamic system with <strong>no pre-made fragments</strong>. Every object is cut based on its <strong>position, angle, direction, and speed</strong> the moment it hits the wire',
+            '🎯 Free Cutting Approach: Players can freely choose how they want to slice: the angle, the approach, whether to cut fine or cut wide, even challenge themselves to break an object into the maximum number of pieces',
+            '🎨 Cut Everything: Light objects, heavy objects, weird objects, things you never expected to fall—all can be sliced apart',
+            '💆 Therapeutic Rhythm: The sizzling, the soft clatter, that brief moment of silence—perfectly soothing',
+            '✨ Detailed Physics Reactions: Drop something too fast and the fragments might even do a little dance',
+            '😌 Pure Viewing Pleasure: Endless, irresistible "mm… so good."'
+        ],
+        'foam_cutting_simulator_why_title': '🌟 Why Play?',
+        'foam_cutting_simulator_why': 'Because you deserve it. Because you want to relax. Because watching things get cut is satisfying. Because life is complicated, but this cutting grid is always steady, straight, and reliable. Watching objects fall apart neatly is more calming than any meditation.',
+        'foam_cutting_simulator_summary_title': '💬 One-Sentence Summary',
+        'foam_cutting_simulator_summary': '<strong>Foam Cutting Simulator</strong> —— When everything is cut apart, your mind becomes peaceful.',
+        'foam_cutting_simulator_cta_title': '🧊 Ready to Experience Therapeutic Cutting? 🧊',
+        'foam_cutting_simulator_cta_desc': 'Experience now and let Foam Cutting Simulator take you into a world of pure cutting therapy!'
     }
 };
 
@@ -315,6 +365,69 @@ function updatePageContent(lang) {
             mistyMediaMention.innerHTML = t.misty_onsen_media_html;
         }
         mistyOnsenModal.querySelectorAll('.store-action').forEach(action => {
+            action.textContent = t.buy_steam;
+        });
+    }
+
+    // 更新 Foam Cutting Simulator 模態框
+    const foamCuttingSimulatorModal = document.getElementById('foamCuttingSimulatorModal');
+    if (foamCuttingSimulatorModal) {
+        foamCuttingSimulatorModal.querySelector('.modal-header h2').textContent = t.foam_cutting_simulator_modal_title;
+        foamCuttingSimulatorModal.querySelector('.modal-header p').textContent = t.foam_cutting_simulator_modal_subtitle;
+        foamCuttingSimulatorModal.querySelector('.modal-body h3').textContent = t.foam_cutting_simulator_name;
+        
+        // 更新標語（第一個 h4）
+        const fcsH4s = foamCuttingSimulatorModal.querySelectorAll('.modal-body h4');
+        if (fcsH4s && fcsH4s.length > 0) {
+            fcsH4s[0].textContent = t.foam_cutting_simulator_slogan;
+        }
+        
+        // 更新描述（第一個 p）
+        const firstP = foamCuttingSimulatorModal.querySelector('.modal-body > p');
+        if (firstP) {
+            firstP.textContent = t.foam_cutting_simulator_desc;
+        }
+
+        // 更新關於遊戲部分
+        if (fcsH4s && fcsH4s.length > 1) {
+            fcsH4s[1].textContent = t.foam_cutting_simulator_about_title;
+            const aboutP = fcsH4s[1].nextElementSibling;
+            if (aboutP && aboutP.tagName === 'P') {
+                aboutP.innerHTML = t.foam_cutting_simulator_about;
+            }
+        }
+
+        // 更新遊戲特色標題和列表
+        if (fcsH4s && fcsH4s.length > 2) {
+            fcsH4s[2].textContent = t.foam_cutting_simulator_features_title;
+        }
+        const fcsFeaturesList = foamCuttingSimulatorModal.querySelector('.modal-body ul');
+        if (fcsFeaturesList) {
+            fcsFeaturesList.innerHTML = t.foam_cutting_simulator_features.map(feature => `<li>${feature}</li>`).join('');
+        }
+
+        // 更新為什麼要玩部分
+        if (fcsH4s && fcsH4s.length > 3) {
+            fcsH4s[3].textContent = t.foam_cutting_simulator_why_title;
+            const whyP = fcsH4s[3].nextElementSibling;
+            if (whyP && whyP.tagName === 'P') {
+                whyP.textContent = t.foam_cutting_simulator_why;
+            }
+        }
+
+        // 更新一句話總結部分
+        if (fcsH4s && fcsH4s.length > 4) {
+            fcsH4s[4].textContent = t.foam_cutting_simulator_summary_title;
+            const summaryP = fcsH4s[4].nextElementSibling;
+            if (summaryP && summaryP.tagName === 'P') {
+                summaryP.innerHTML = t.foam_cutting_simulator_summary;
+            }
+        }
+
+        // 更新CTA區域
+        foamCuttingSimulatorModal.querySelector('.cta-section h4').textContent = t.foam_cutting_simulator_cta_title;
+        foamCuttingSimulatorModal.querySelector('.cta-section p').textContent = t.foam_cutting_simulator_cta_desc;
+        foamCuttingSimulatorModal.querySelectorAll('.store-action').forEach(action => {
             action.textContent = t.buy_steam;
         });
     }
